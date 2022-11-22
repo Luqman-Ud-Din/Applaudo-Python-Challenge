@@ -1,8 +1,20 @@
 # Automated Product Order
 
-Spiders Implemented
+Spiders:
 
 - https://www.uniqlo.com/
+  
+    ---- Implemented
+  
+
+- https://www.nike.com/ 
+  
+    ---- `Nike` crawler is not implemented as I was facing a bug related `Add to Bag` button
+
+    ---- I have shared a video regarding the bug [unable to add product in the cart](./nike-add-to-bag-bug.mp4)
+    
+    ---- Sometimes it works in the browser and sometimes I get `status code 429` => Too many requests
+
 
 
 ## Tech Stack
