@@ -106,5 +106,3 @@ profile_information = {
     ---- I found that avoiding `scrapy-playwright` plugin and using `playwright` web drivers directly solved the Login issue.
   
     ---- Here is the stackoverflow link [scrapy-playwright and playwright works differently](https://stackoverflow.com/questions/72375388/websites-using-scrapy-playwright-and-only-playwright-work-differently). The link indicates that developers are facing the similar issue I was facing using the `scrapy-playwright` plugin.
-  
-    ---- At the moment the crawler works only with `headless=False` option. The Uniqlo website is somehow detecting `headless=True` mode and this results in scraping failure.

@@ -2,6 +2,7 @@ import json
 
 import scrapy
 from playwright.sync_api import sync_playwright
+from playwright_stealth import stealth_sync
 from scrapy import Request
 
 from automated_product_buyer.helpers import strip_text, should_abort_image_requests
@@ -88,9 +89,9 @@ class UniqloSpider(scrapy.Spider):
 
     def start_requests(self):
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=False)
+            browser = p.chromium.launch(headless=True)
             page = browser.new_page()
-            page.add_init_script('() => Object.defineProperty(navigator,"webdriver",{get: () => undefined})');
+            stealth_sync(page)
             page.route("**/*", should_abort_image_requests)
 
             checkout_payment_page = CheckoutPaymentPage(page)
